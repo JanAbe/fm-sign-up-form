@@ -15,7 +15,7 @@ export const RegistrationForm = () => {
   }
 
   return (
-    <form className="form shadow" onSubmit={handleSubmit(onSubmit)}>
+    <form className="form shadow" onSubmit={handleSubmit(onSubmit)} noValidate>
       <div>
         <input
           className={errors.firstName ? "error bg-error input" : "input"}
@@ -50,8 +50,7 @@ export const RegistrationForm = () => {
             pattern: /^[^@]+@[^@]+\.[^@]+$/,
           })}
           placeholder="Email Address"
-          /* how to make my custom validation work with type="email"? */
-          type="text"
+          type="email"
         />
         <div className="validation-message-wrapper">
           {errors.email?.type === "required" && (
