@@ -1,0 +1,138 @@
+.root {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  margin: 2rem;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.description {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.form-section {
+  max-width: 31rem;
+}
+
+.banner {
+  padding: 1rem;
+  background-color: var(--blue);
+  text-align: center;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+
+.banner span {
+  display: block;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--white);
+  padding: 1.2rem;
+  border-radius: 8px;
+}
+
+.validation-message-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.validation-message {
+  color: var(--red);
+  font-size: 0.8rem;
+  margin: 0;
+  font-style: italic;
+}
+
+.error {
+  border: 1px solid var(--red);
+}
+
+.bg-error {
+  background-image: url("assets/images/icon-error.svg");
+  background-position: right 10px top 15px;
+  background-repeat: no-repeat;
+  padding-right: 2rem;
+}
+
+.input {
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--grayish-blue);
+  width: 100%;
+}
+
+.input::placeholder {
+  font-size: 0.9rem;
+  font-weight: 700;
+  opacity: 0.4;
+}
+
+.free-trial-button {
+  color: var(--white);
+  text-transform: uppercase;
+  background-color: var(--green);
+  padding: 1rem;
+  border-radius: 8px;
+  border: none;
+  border-bottom: 4px solid var(--darker-green);
+}
+
+.free-trial-button:hover {
+  background-color: var(--lighter-green);
+}
+
+.tos {
+  text-align: center;
+  color: var(--grayish-blue);
+  font-size: 0.8rem;
+}
+
+.tos-link {
+  font-weight: 700;
+  color: var(--red);
+  text-decoration: none;
+}
+
+.shadow {
+  box-shadow: 0 8px 0 rgb(0, 0, 0, 0.17);
+}
+
+@media (min-width: 55em) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 70rem;
+  }
+
+  .intro-section {
+    place-self: center;
+    max-width: 60ch;
+  }
+
+  .title {
+    font-size: 3rem;
+    text-align: left;
+  }
+
+  .description {
+    text-align: left;
+  }
+
+  .banner span {
+    display: inline;
+  }
+
+  .form {
+    padding: 2rem;
+  }
+}
